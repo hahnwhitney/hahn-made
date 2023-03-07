@@ -32,31 +32,29 @@ const ThreadForm = () => {
       <h3>Add a New Thread</h3>
 
       <form  className="thread-form"onSubmit={handleSubmit}>
-        <div>
-          <div className="flex-wrapper">
-            <label id="brand-label" htmlFor="brand">Brand</label>
-            <input
-              id="brand"
-              name="brand"
-              type="text"
-              value={threadDetails.brand}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div className="flex-wrapper">
-            <label id="type-label" htmlFor="type">Type</label>
-            <input
-              id="type"
-              name="type"
-              type="text"
-              value={threadDetails.type}
-              onChange={handleChange}
-            />
-          </div>
+        <div className="flex-wrapper">
+          <label id="brand-label" htmlFor="brand">Brand</label>
+          <input
+            id="brand"
+            name="brand"
+            type="text"
+            value={threadDetails.brand}
+            onChange={handleChange}
+          />
         </div>
 
-        <fieldset>
+        <div className="flex-wrapper">
+          <label id="type-label" htmlFor="type">Type</label>
+          <input
+            id="type"
+            name="type"
+            type="text"
+            value={threadDetails.type}
+            onChange={handleChange}
+          />
+        </div>
+
+        <fieldset id="color-content-wrapper">
           <legend>Color</legend>
 
           <div className="flex-wrapper">
@@ -69,92 +67,92 @@ const ThreadForm = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="flex-wrapper">
-            <label htmlFor="color-id">Brand Id</label>
-            <input
-              id="color-id"
-              name="color-id"
-              type="text"
-              value={threadDetails.colorId}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex-wrapper">
-            <label htmlFor="color-hex">Hex Code</label>
-            <input
-              id="color-hex"
-              name="color-hex"
-              type="text"
-              value={threadDetails.colorHex}
-              onChange={handleChange}
-            />
+          <div className="grid-wrapper-row">
+            <div className="flex-wrapper">
+              <label htmlFor="color-id">Brand Id</label>
+              <input
+                id="color-id"
+                name="color-id"
+                type="text"
+                value={threadDetails.colorId}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex-wrapper">
+              <label htmlFor="color-hex">Hex Code</label>
+              <input
+                id="color-hex"
+                name="color-hex"
+                type="text"
+                value={threadDetails.colorHex}
+                onChange={handleChange}
+              />
+            </div>
           </div>
         </fieldset>
 
-        <div>
-          <fieldset id="fiber-content-wrapper">
-            <legend>Content</legend>
-            <label htmlFor="fiber-cotton">
-              <input
-                id="fiber-cotton"
-                name="contentFiberType"
-                type="radio"
-                value="cotton"
-                onChange={handleChange}
-              />
-              100% Cotton
-            </label>
-
-            <label htmlFor="fiber-polyester">
-              <input
-                id="fiber-polyester"
-                name="contentFiberType"
-                type="radio"
-                value="polyester"
-                onChange={handleChange}
-              />
-              100% Polyester
-            </label>
-          </fieldset>
-
-          <fieldset id="cone-content-wrapper">
-            <legend>Is this a serger thread cone?</legend>
-            <label htmlFor="isCone-yes">
-              <input
-                id="isCone-yes"
-                name="isCone"
-                type="radio"
-                value={true}
-                onChange={handleChange}
-              />
-              Yes
-            </label>
-            <label htmlFor="isCone-no">
-              <input
-                id="isCone-yes"
-                name="isCone"
-                type="radio"
-                value={false}
-                onChange={handleChange}
-              />
-              No
-            </label>
-          </fieldset>
-
-          <div className="flex-wrapper">
-            <label htmlFor="brand">Length in Yards</label>
+        <fieldset id="fiber-content-wrapper">
+          <legend>Content</legend>
+          <label htmlFor="fiber-cotton">
             <input
-              id="quantity-yards"
-              name="quantity-yards"
-              type="text"
-              value={threadDetails.quantityInYards}
+              id="fiber-cotton"
+              name="contentFiberType"
+              type="radio"
+              value="cotton"
               onChange={handleChange}
             />
-          </div>
+            100% Cotton
+          </label>
 
-          <input id="thread-form-submit" type="submit" value="Submit" />
-          
+          <label htmlFor="fiber-polyester">
+            <input
+              id="fiber-polyester"
+              name="contentFiberType"
+              type="radio"
+              value="polyester"
+              onChange={handleChange}
+            />
+            100% Polyester
+          </label>
+        </fieldset>
+
+        <fieldset id="cone-content-wrapper">
+          <legend>Is this a serger thread cone?</legend>
+          <label htmlFor="isCone-yes">
+            <input
+              id="isCone-yes"
+              name="isCone"
+              type="radio"
+              value={true}
+              onChange={handleChange}
+            />
+            Yes
+          </label>
+          <label htmlFor="isCone-no">
+            <input
+              id="isCone-yes"
+              name="isCone"
+              type="radio"
+              value={false}
+              onChange={handleChange}
+            />
+            No
+          </label>
+        </fieldset>
+
+        <div className="flex-wrapper">
+          <label htmlFor="brand">Length in Yards</label>
+          <input
+            id="quantity-yards"
+            name="quantity-yards"
+            type="text"
+            value={threadDetails.quantityInYards}
+            onChange={handleChange}
+          />
         </div>
+
+        <input id="thread-form-submit" type="submit" value="Submit" />
+
       </form>
     </div>
   );

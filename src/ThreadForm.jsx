@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { threadArray } from './arrays';
 
 const ThreadForm = () => {
   const [threadDetails, setThreadDetails] = useState({
@@ -6,8 +7,10 @@ const ThreadForm = () => {
     color: '',
     colorId: '',
     colorHex: '',
-    contentFiberType: '',
-    contentPercentage: 100,
+    content: [{
+      fiberType: '',
+      percentage: 100,
+    }],
     cost: 0.00,
     quantityInYards: 0,
     type: '',
@@ -21,6 +24,20 @@ const ThreadForm = () => {
         [name]: value
       }));
   };
+
+  const handleContentObjectChange = (e, index) => {
+    const { name, value } = e.target;
+
+    setThreadDetails(prevState => ({
+      ...prevState,
+      content: [
+        {
+          [name]: value,
+          percentage: 100,
+        },
+      ],
+    }));
+  }
 
   const handleSubmit = (event) => {
     console.log(threadDetails);
@@ -96,10 +113,10 @@ const ThreadForm = () => {
           <label htmlFor="fiber-cotton">
             <input
               id="fiber-cotton"
-              name="contentFiberType"
+              name="fiberType"
               type="radio"
               value="cotton"
-              onChange={handleChange}
+              onChange={handleContentObjectChange}
             />
             100% Cotton
           </label>
@@ -107,10 +124,10 @@ const ThreadForm = () => {
           <label htmlFor="fiber-polyester">
             <input
               id="fiber-polyester"
-              name="contentFiberType"
+              name="fiberType"
               type="radio"
               value="polyester"
-              onChange={handleChange}
+              onChange={handleContentObjectChange}
             />
             100% Polyester
           </label>

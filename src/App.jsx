@@ -1,7 +1,8 @@
 import FabricGrid from './FabricGrid';
+import ThreadForm from './ThreadForm';
 import ThreadGrid from './ThreadGrid';
 import heart from './heart.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <FabricGrid />
 
           <h2>Thread</h2>
+          <ThreadForm />
           <ThreadGrid />
         </div>
 

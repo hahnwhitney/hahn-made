@@ -61,7 +61,7 @@ const ThreadForm = () => {
             <label htmlFor="color-name">Name</label>
             <input
               id="color-name"
-              name="color-name"
+              name="color"
               type="text"
               value={threadDetails.colorName}
               onChange={handleChange}
@@ -72,7 +72,7 @@ const ThreadForm = () => {
               <label htmlFor="color-id">Brand Id</label>
               <input
                 id="color-id"
-                name="color-id"
+                name="colorId"
                 type="text"
                 value={threadDetails.colorId}
                 onChange={handleChange}
@@ -82,7 +82,7 @@ const ThreadForm = () => {
               <label htmlFor="color-hex">Hex Code</label>
               <input
                 id="color-hex"
-                name="color-hex"
+                name="colorHex"
                 type="text"
                 value={threadDetails.colorHex}
                 onChange={handleChange}
@@ -144,15 +144,14 @@ const ThreadForm = () => {
           <label htmlFor="brand">Length in Yards</label>
           <input
             id="quantity-yards"
-            name="quantity-yards"
+            name="quantityInYards"
             type="text"
             value={threadDetails.quantityInYards}
             onChange={handleChange}
           />
         </div>
 
-        <input id="thread-form-submit" type="submit" value="Submit" />
-
+        <input id="thread-form-submit" type="submit" value="Add Thread" />
       </form>
     </div>
   );

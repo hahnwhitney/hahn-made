@@ -1,13 +1,12 @@
 import React from 'react';
-
-import navy from './fabric-images/navy-canvas.jpg'
+import mushrooms from './../../images/mushrooms.jpg'
 
 const Fabric = ({
   brand,
   name,
 }) => (
   <div className="card">
-    <img className="fabric-swatch" src={navy} alt="navy" />
+    <img className="fabric-swatch" src={mushrooms} alt="mushrooms" />
 
     <div className="capitalize">
       {brand}

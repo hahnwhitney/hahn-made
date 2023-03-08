@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fabricContentArray } from './arrays';
+import { fabricContents } from './../../arrays/fabricContents';
 
 const FabricForm = () => {
   const [fabricDetails, setFabricDetails] = useState({
@@ -166,7 +166,7 @@ const FabricForm = () => {
           <fieldset id="fiber-content-wrapper">
             <legend>Fiber Content</legend>
             <div>
-            {fabricContentArray.map((item, i) => {
+            {fabricContents.map((item, i) => {
               return (
                 <label htmlFor={`fiber-${item}`} key={item.replace(/[^A-Za-z0-9]/g, '-').toLowerCase()}>
                   <input

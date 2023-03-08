@@ -1,0 +1,59 @@
+/* MEDIA QUERIES ---------------------------------- */
+/* ----- Min Width: 600px ------------------------- */
+@media (min-width: 600px) {
+  .fabric-form,
+  .fabric-grid,
+  .thread-form,
+  .thread-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #fiber-content-wrapper > label {
+    display: block;
+    margin-right: 0;
+  }
+
+  .fabric-form > #fiber-content-wrapper {
+    grid-column: span 2;
+
+    & > div {
+      grid-template-columns: 1.25fr 1fr 1.25fr;
+    }
+  }
+
+  .form-submit {
+    grid-column: 2/2;
+    justify-self: right;
+  }
+}
+
+/* ----- Min Width: 800px ------------------------- */
+@media (min-width: 800px) {
+  .fabric-form > #fiber-content-wrapper > div {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+  }
+}
+
+/* ----- Min Width: 1030px ------------------------ */
+@media (min-width: 1030px) {
+  .content {
+    padding: 0 40px;
+  }
+
+  .fabric-grid,
+  .thread-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* ----- Min Width: 1500px ------------------------ */
+@media (min-width: 1500px) {
+  .content {
+    padding: 0 8vw;
+  }
+
+  .fabric-grid,
+  .thread-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

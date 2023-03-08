@@ -1,7 +1,5 @@
 import React from 'react';
 
-// TODO: Display thread cost
-
 const Thread = ({
   brand,
   color,
@@ -36,7 +34,6 @@ const Thread = ({
 
       <br />
       <span>{`${quantityInYards} yards`}</span>
-      {/*<br /><span>{`$${cost.toFixed(2)}`}</span>*/}
     </div>
 
     {isCone && <div className="cone">cone</div>}

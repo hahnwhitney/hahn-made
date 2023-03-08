@@ -1,9 +1,9 @@
-import Thread from './Thread';
-import { threadArray } from './arrays';
+import Thread from './../Thread';
+import { threads } from './../../arrays/threads';
 
 const ThreadGrid = () => (
   <div className="thread-grid">
-    {threadArray.map((thread, i) => {
+    {threads.map((thread, i) => {
        return (
         <Thread
           key={(`${thread.color}-${i}`).replace(/\s+/g, '-').toLowerCase()}

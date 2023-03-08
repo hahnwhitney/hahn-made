@@ -1,16 +1,15 @@
-import FabricForm from './FabricForm';
-import FabricGrid from './FabricGrid';
-import ThreadForm from './ThreadForm';
-import ThreadGrid from './ThreadGrid';
-import heart from './heart.svg';
-import './App.scss';
+import FabricForm from './components/FabricForm';
+import FabricGrid from './components/FabricGrid';
+import ThreadForm from './components/ThreadForm';
+import ThreadGrid from './components/ThreadGrid';
+import heart from './images/heart.svg';
+import './styles/app.scss';
 
 function App() {
   return (
       <div className="main">
         <div className="header">
           <h1>hahnmade</h1>
-          {/*<TopNav />*/}
         </div>
 
         <div className="content">

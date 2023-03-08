@@ -1,0 +1,18 @@
+export const fabricContents = [
+  'Acetate',
+  'Bamboo',
+  'Cashmere',
+  'Cotton',
+  'Denim',
+  'Elastane/Spandex',
+  // 'Elastane/Lycra/Spandex',
+  'Hemp',
+  'Linen',
+  'Nylon',
+  'Polyester',
+  'Silk',
+  'Vinyl',
+  'Viscose/Rayon',
+  // 'Viscose/Bemberg/Cupro/Lyocell/Modal/Rayon/Tencel',
+  'Wool',
+];

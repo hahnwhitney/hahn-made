@@ -1,0 +1,22 @@
+/* FOOTER ------------------------------------ */
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--dark-teal);
+  color: white;
+}
+
+#heart {
+  height: 24px;
+  width: 24px;
+  margin: 0 5px 0 4px;
+}
+
+#owlbert {
+  height: 40px;
+  margin: 0 5px;
+}

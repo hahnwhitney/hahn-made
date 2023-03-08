@@ -1,0 +1,47 @@
+/* VARIABLES --------------------------------- */
+:root {
+  --dark-teal: #1B4A56;
+  --link-pink: #FF2768;
+  --link-purple: #6210FA;
+}
+
+/* FONTS ------------------------------------- */
+// Playfair Display - Regular 400
+// Playfair Display - Medium 500 Italic
+// Playfair Display - SemiBold 600
+
+html, body {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--dark-teal);
+}
+
+/* HELPERS ----------------------------------- */
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* MAIN LAYOUT ------------------------------- */
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #F2EEF7;
+}
+
+.content {
+  /* flex sets up sticky footer */
+  flex: 1 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER ------------------------------------ */
+.header h1 {
+  padding: 0 40px;
+}

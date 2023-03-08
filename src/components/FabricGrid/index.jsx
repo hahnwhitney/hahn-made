@@ -1,9 +1,9 @@
-import Fabric from './Fabric';
-import { fabricArray } from './arrays';
+import Fabric from './../Fabric';
+import { fabrics } from './../../arrays/fabrics';
 
 const FabricGrid = () => (
   <div className="fabric-grid">
-    {fabricArray.map((fabric, i) => {
+    {fabrics.map((fabric, i) => {
       return (
         <Fabric
           key={(`${fabric.brand}-${fabric.name}-${i}`).replace(/\s+/g, '-').toLowerCase()}

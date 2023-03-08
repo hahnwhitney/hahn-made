@@ -163,7 +163,7 @@ const FabricForm = () => {
             </label>
           </fieldset>
 
-          <fieldset className="wow" id="fiber-content-wrapper">
+          <fieldset id="fiber-content-wrapper">
             <legend>Fiber Content</legend>
             <div>
             {fabricContentArray.map((item, i) => {

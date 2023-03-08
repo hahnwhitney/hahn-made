@@ -1,33 +1,33 @@
-/* FONTS --------------------------- */
+/* FONTS ------------------------------------- */
 // Playfair Display - Regular 400
 // Playfair Display - Medium 500 Italic
 // Playfair Display - SemiBold 600
 
 html, body {
-  font-family: 'Playfair Display', serif;font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-style: italic;
   color: var(--dark-teal);
 }
 
-/* VARIABLES ----------------------- */
+/* VARIABLES --------------------------------- */
 :root {
   --dark-teal: #1B4A56;
   --link-pink: #FF2768;
   --link-purple: #6210FA;
 }
 
-/* HELPERS ------------------------- */
+/* HELPERS ----------------------------------- */
 .capitalize {
   text-transform: capitalize;
 }
 
-/* MAIN LAYOUT --------------------- */
+/* MAIN LAYOUT ------------------------------- */
 .main {
   display: flex;
   min-height: 100vh;
@@ -41,12 +41,12 @@ h1, h2, h3, h4 {
   padding: 0 20px;
 }
 
-/* HEADER -------------------------- */
+/* HEADER ------------------------------------ */
 .header h1 {
   padding: 0 40px;
 }
 
-/* CARDS --------------------------- */
+/* CARDS ------------------------------------- */
 .fabric-grid,
 .thread-grid {
   display: grid;
@@ -95,7 +95,8 @@ h1, h2, h3, h4 {
   height: 100px;
 }
 
-/* INPUTS -------------------------- */
+/* INPUTS ------------------------------------ */
+.fabric-form,
 .thread-form {
   display: grid;
   grid-template-columns: 1fr;
@@ -106,6 +107,7 @@ h1, h2, h3, h4 {
   }
 }
 
+.fabric-form-wrapper,
 .thread-form-wrapper {
   border: 2px solid var(--dark-teal);
   background-color: #FFF;
@@ -146,7 +148,7 @@ fieldset {
   margin-right: 10px;
 }
 
-#thread-form-submit {
+.form-submit {
   background-color: var(--link-pink);
   font-family: 'Playfair Display', serif;
   color: white;
@@ -154,7 +156,7 @@ fieldset {
   padding: 10px;
 }
 
-/* FOOTER -------------------------- */
+/* FOOTER ------------------------------------ */
 footer {
   display: flex;
   flex-direction: row;
@@ -177,16 +179,17 @@ footer {
   margin: 0 5px;
 }
 
-/* MEDIA QUERIES ------------------- */
-@media (min-width: 600px) {
-  .fabric-grid,
-  .thread-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.fabric-form > #fiber-content-wrapper > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
+/* MEDIA QUERIES ----------------------------- */
 @media (min-width: 600px) {
-  .thread-form {
+  .fabric-grid,
+  .thread-grid,
+  .thread-form,
+  .fabric-form {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -195,9 +198,23 @@ footer {
     margin-right: 0;
   }
 
-  #thread-form-submit {
+  .fabric-form > #fiber-content-wrapper {
+    grid-column: span 2;
+
+    & > div {
+      grid-template-columns: 1.25fr 1fr 1.25fr;
+    }
+  }
+
+  .form-submit {
     grid-column: 2/2;
     justify-self: right;
+  }
+}
+
+@media (min-width: 800px) {
+  .fabric-form > #fiber-content-wrapper > div {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
   }
 }
 

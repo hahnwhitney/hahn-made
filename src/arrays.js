@@ -1,21 +1,37 @@
+export const fabricContentArray = [
+  'Acetate',
+  'Bamboo',
+  'Cashmere',
+  'Cotton',
+  'Denim',
+  'Elastane/Spandex',
+  // 'Elastane/Lycra/Spandex',
+  'Hemp',
+  'Linen',
+  'Nylon',
+  'Polyester',
+  'Silk',
+  'Vinyl',
+  'Viscose/Rayon',
+  // 'Viscose/Bemberg/Cupro/Lyocell/Modal/Rayon/Tencel',
+  'Wool',
+];
+
 export const fabricArray = [
   {
-    // content: {
-    //   linen: 100,
-    // },
-    width: 55,
-    quantityInYards: 2,
+    brand: 'Robert Kaufman',
+    content: [{
+      fiberType: 'linen',
+      percentage: 100,
+    }],
     cost: 50,
     costPerYard: 25,
-    brand: 'Robert Kaufman',
-    name: 'Hemptex Chambray Bone',
-    colors: [
-      'blue',
-    ],
     image: 'https://cdn.shoplightspeed.com/shops/644539/files/30993297/robert-kaufman-sevenberry-petite-garden-lawn-garde.jpghttps://cdn.shoplightspeed.com/shops/644539/files/30993297/robert-kaufman-sevenberry-petite-garden-lawn-garde.jpg',
-    weight: 'light',
+    name: 'Hemptex Chambray Bone',
+    quantityInYards: 2,
     stretchPercentage: 0,
-    // purchaseInformation: {},
+    weight: 'light',
+    width: 55,
   },
 ];
 

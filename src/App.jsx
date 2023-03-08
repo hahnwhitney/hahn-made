@@ -1,3 +1,4 @@
+import FabricForm from './FabricForm';
 import FabricGrid from './FabricGrid';
 import ThreadForm from './ThreadForm';
 import ThreadGrid from './ThreadGrid';
@@ -14,6 +15,7 @@ function App() {
 
         <div className="content">
           <h2>Fabric</h2>
+          <FabricForm />
           <FabricGrid />
 
           <h2>Thread</h2>

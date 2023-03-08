@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { threadArray } from './arrays';
 
 const ThreadForm = () => {
   const [threadDetails, setThreadDetails] = useState({
@@ -48,7 +47,7 @@ const ThreadForm = () => {
     <div className="thread-form-wrapper">
       <h3>Add a New Thread</h3>
 
-      <form  className="thread-form"onSubmit={handleSubmit}>
+      <form className="thread-form" onSubmit={handleSubmit}>
         <div className="flex-wrapper">
           <label id="brand-label" htmlFor="brand">Brand</label>
           <input
@@ -109,7 +108,7 @@ const ThreadForm = () => {
         </fieldset>
 
         <fieldset id="fiber-content-wrapper">
-          <legend>Content</legend>
+          <legend>Fiber Content</legend>
           <label htmlFor="fiber-cotton">
             <input
               id="fiber-cotton"
@@ -168,7 +167,7 @@ const ThreadForm = () => {
           />
         </div>
 
-        <input id="thread-form-submit" type="submit" value="Add Thread" />
+        <input className="form-submit" type="submit" value="Add Thread" />
       </form>
     </div>
   );

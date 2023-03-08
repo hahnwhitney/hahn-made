@@ -8,7 +8,17 @@ const FabricGrid = () => (
         <Fabric
           key={(`${fabric.brand}-${fabric.name}-${i}`).replace(/\s+/g, '-').toLowerCase()}
           brand={fabric.brand}
+          // content
+            // fiberType
+            // percentage
+          cost={fabric.cost}
+          costPerYard={fabric.costPerYard}
+          // image={}
           name={fabric.name}
+          quantityInYards={fabric.quantityInYards}
+          stretchPercentage={fabric.stretchPercentage}
+          weight={fabric.weight}
+          width={fabric.width}
         />
       )
     })}

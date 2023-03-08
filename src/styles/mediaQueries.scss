@@ -32,6 +32,10 @@
   .fabric-form > #fiber-content-wrapper > div {
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
   }
+
+  .fabric-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* ----- Min Width: 1030px ------------------------ */
@@ -40,7 +44,6 @@
     padding: 0 40px;
   }
 
-  .fabric-grid,
   .thread-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
